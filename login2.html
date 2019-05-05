@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Login</title>
+<script src='js/script2.js' ></script>
+		<script src='js/responsivevoice.js' ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script language="javascript">
+$(document).on("contextmenu", ".main", function(e){
+   			window.location = "index.html";
+   			return false;
+		});
+		</script>
+<script language="jscript">
+jQuery(function($) {
+    $('.main').click(function() {
+        return false;
+    }).dblclick(function() {
+       login();
+    });
+});
+</script>
+</head>
+
+<body class='main'>
+<h1>Login</h1>
+<form id="labnol" method="get" action="login.php">
+<label>UserName</label>
+<input type="text" name="uname" id="uname" placeholder="Speak" />
+<br />
+<br />
+<label>Password</label>
+<input type="text" name="pas" id="pas" placeholder="Speak" />
+</form>
+<script src='responsivevoice.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='temp.js'></script>  
+<script src='temp1.js'></script> 
+<script src='templog.js'></script>
+<script src='js/script.js' ></script>
+</body>
+</html>
