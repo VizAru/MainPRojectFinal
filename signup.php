@@ -15,11 +15,11 @@ if(mysqli_query($db,$sql2))
 {
 if(mysqli_query($db,$sql))
 {
-	 header("location: index.html");
+	 header("location: signmsg.html");
 }}
 else
 {
-	echo mysqli_error($db);
+	header("location: signerr.html");
 }
 
 ?>

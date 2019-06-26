@@ -19,6 +19,6 @@
          $_SESSION['user'] = $myusername;
          header("location: lhome.php");
       }else {
-         $error = "Your Login Name or Password is invalid";
+         header("location: logerr.html");
       }
 ?>

@@ -24,11 +24,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script language="javascript">
 		$(document).on("contextmenu", ".main-content", function(e){
-   			window.location = "inbox.php";
+   			window.location = "logout.php";
    			return false;
 		});
-
-
+</script>
+<script language="jscript">
 jQuery(function($) {
     $('.main-content').click(function() {
         return false;
@@ -38,10 +38,38 @@ jQuery(function($) {
     });
 });
 </script>
+<script language="jscript">
+var precision = 300;
+var lastClickTime = 0;
+
+$(document).ready(function()
+{
+    var div = $('#main');
+
+    $(div).bind("contextmenu", function(e)
+    {
+        return false;
+    }); 
+
+    $(div).mousedown(function(event)
+    {
+        if (event.which == 3)
+        {
+            var time = new Date().getTime();
+
+            if(time - lastClickTime <= precision)
+            {
+                 window.location = "inboxtemp.php";				
+            }
+
+            lastClickTime = time;
+        }
+    });
+});
+</script>
 	</head>
-	<body class="main" onLoad="welcomemsg2()">
+	<body class="main" onLoad="welcomemsg2()" id="main">
 		
-			<a href="logout.php">Logout</a>
 		
 		<div class='main-content'>
 		

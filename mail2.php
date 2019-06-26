@@ -12,7 +12,7 @@
 	   $sql = "INSERT INTO ".$to."( mail, subject, body) VALUES( '$name','$sub','$msg')";
 	   if(mysqli_query($db,$sql))
 {
-	 header("location: compose.php");
+	 header("location: compmsg.html");
 }
 
 ?>

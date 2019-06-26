@@ -19,10 +19,13 @@
 		<link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
 		<link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
 		<link rel='stylesheet' type='text/css' href='css/style.css' >
-		<script src='js/script2.js' ></script>
 		<script src='js/responsivevoice.js' ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		
+		<script language="javascript">
+window.onload = function() {
+  compmsg();
+};
+</script>
 <script language="javascript">
 $(document).on("contextmenu", ".main", function(e){
 			compred();
@@ -41,12 +44,42 @@ jQuery(function($) {
     });
 });
 </script>
+<script language="jscript">
+var precision = 300;
+var lastClickTime = 0;
+
+$(document).ready(function()
+{
+    var div = $('#main');
+
+    $(div).bind("contextmenu", function(e)
+    {
+		compred();
+        return false;
+    }); 
+
+    $(div).mousedown(function(event)
+    {
+        if (event.which == 3)
+        {
+            var time = new Date().getTime();
+
+            if(time - lastClickTime <= precision)
+            {
+                window.location = "lhome.php";				
+            }
+
+            lastClickTime = time;
+        }
+    });
+});
+</script>
 	</head>
 	<?php 		
 	session_start();		
 	$name = $_SESSION['user'];
 	?>
-			<body class='main'>
+			<body class='main' style="height: 666px;" id="main">
 <h1>Compose</h1>
 <form id="comp" method="get" action="mail2.php">
 <label>To</label>
@@ -75,6 +108,7 @@ jQuery(function($) {
 		<script src='temp3.js'></script>
 		<script src='temp31.js'></script>
 		<script src='temp32.js'></script>
+		<script src='comp.js'></script>
 		
 		
 	</body>

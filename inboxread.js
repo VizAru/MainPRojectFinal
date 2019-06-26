@@ -8,4 +8,4 @@ function inboxr(){
 		responsiveVoice.speak("Message");
 		var text3 = $('#msg').val();
 		responsiveVoice.speak(text3);
-}// JavaScript Document
+};// JavaScript Document
